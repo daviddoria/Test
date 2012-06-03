@@ -1,14 +1,8 @@
 #include <vector>
 
-struct MyClass
-{
-  int const x;
-  MyClass(int x): x(x) {}
-};
-
 int main()
 {
-  std::vector<MyClass> vec;
-  vec.push_back(MyClass(3));
+  // Without compiling with c++0x, "error: in c++98 'v' must be initialized by constructor
+  std::vector<int> v = {1,2,3};
   return 0;
 }
